@@ -33,6 +33,89 @@
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  min-width: 1200px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.font__
+
+/*Блок header*/
+.header {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #f7e296;
+}
+
+.header__logo {
+  position: absolute;
+  top: -18px;
+  left: 60px;
+}
+
+/*Блок header-top*/
+.header-top {
+  display: flex;
+}
+
+.header-top__main-search {
+  margin-right: 340px;
+}
+
+.header-top__user-menu {
+  margin-right: auto;
+}
+
+/*Блок main-search*/
+.main-search {
+  position: relative;
+  padding-left: 35px;
+}
+
+.main-search__input {
+  background-color: transparent;
+  border: none;
+}
+
+.main-search__button {
+  position: absolute;
+  top: 9px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  background-image: url("../img/icon/search.svg");
+  border: none;
+
 }
 

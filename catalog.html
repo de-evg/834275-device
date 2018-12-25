@@ -3,45 +3,47 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normolize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <title>Итернет-магазин гаджетов - DEVICE</title>
+  <title>Интернет-магазин гаджетов - DEVICE</title>
 </head>
 <body>
-  <header class="main-header">
-    <h1 class="viseualli-hidden">Интернет-магазин гаджетов - DEVICE</h1>
-    <a class="logo main-header__logo" href="index.html">
-      <img src="img/logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
-    </a>
-    <div class="header-top-container">
-      <form class="main-header__main-search main-search">
-        <input type="text" name="main-search" placeholder="Поиск по сайту">
-        <button class="main-search__button" type="submit"></button>
-      </form>
-      <div class="main-header__user-menu user-menu">
-        <ul class="user-menu__account_logged">
-          <li><a class="user-menu__button user-menu__button_color_black" href="#">Валентин Петухов</a></li>
-          <li><a class="user-menu__button user-menu__button_color_black user-menu__button_not_active" href="#">Выйти</a></li>
+  <header class="header">
+    <div class="header__wrapper">
+      <a class="header__logo logo" href="index.html">
+        <img src="img/logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
+      </a>
+      <div class="header__header-top header-top">
+        <form class="header-top__main-search main-search">
+          <input class="main-search__input" type="text" name="main-search" placeholder="Поиск по сайту">
+          <button class="main-search__button" type="submit"></button>
+        </form>
+        <div class="header-top__user-menu user-menu">
+          <ul class="user-menu__account_logged">
+            <li><a class="user-menu__button user-menu__button_color_black" href="#">Валентин Петухов</a></li>
+            <li><a class="user-menu__button user-menu__button_color_black user-menu__button_not_active" href="#">Выйти</a></li>
+          </ul>
+        </div>
+        <div class="header-top__compare-link compare-link"><a href="#">Сравнить</a></div>
+        <div class="header-top__kart-link kart-link"><a href="#">Корзина</a></div>
+      </div>
+      <div class="header-main-container">
+        <ul class="main-header__site-navigation">
+          <li class="main-header__site-navigation-item site-navigation-item"><a href="#" aria-label="Каталог товаров">Каталог товаров</a>
+            <ul class="site-navigation-item__submenu">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнеc-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li class="main-header__site-navigation-item"><a href="#">Доставка</a></li>
+          <li class="main-header__site-navigation-item"><a href="#">Гарантия</a></li>
+          <li class="main-header__site-navigation-item"><a href="#">Контакты</a></li>
         </ul>
       </div>
-      <div class="compare-link main-header__compare-link"><a href="#">Сравнить</a></div>
-      <div class="kart-link main-header__kart-link"><a href="#">Корзина</a></div>
-    </div>
-    <div class="header-main-container">
-      <ul class="main-header__site-navigation">
-        <li class="main-header__site-navigation-item site-navigation-item"><a href="#" aria-label="Каталог товаров">Каталог товаров</a>
-          <ul class="site-navigation-item__submenu">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="#">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнеc-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-        <li class="main-header__site-navigation-item"><a href="#">Доставка</a></li>
-        <li class="main-header__site-navigation-item"><a href="#">Гарантия</a></li>
-        <li class="main-header__site-navigation-item"><a href="#">Контакты</a></li>
-      </ul>
     </div>
   </header>
   <main>
