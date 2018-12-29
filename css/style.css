@@ -61,20 +61,20 @@ input[type="radio"].visually-hidden {
   border: 0;
 }
 
+.wrapper__header {
+  position: relative;
+
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*Блок header*/
 .header {
   width: 1160px;
   display: flex;
   flex-direction: column;
   background-color: #f7e296;
-}
-
-.header__position {
-  position: relative;
-
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .header__header-top {
@@ -114,6 +114,15 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
+/*Блок logo*/
+.logo__image:hover,
+.logo__image:focus {
+  opacity: 0.6;
+}
+
+.logo__image:active {
+  opacity: 0.3;
+}
 
 /*Блок main-search*/
 .main-search {
@@ -299,6 +308,33 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
+.user-menu__signin:hover::before,
+.user-menu__signin:focus::before,
+.user-menu__user-name:hover::before,
+.user-menu__user-name:focus::before {
+  opacity: 0.6;
+}
+
+.user-menu__signin:active::before,
+.user-menu__user-name:active::before {
+  opacity: 0.3;
+}
+
+.user-menu__signin:hover,
+.user-menu__signin:focus,
+.user-menu__user-name:hover,
+.user-menu__user-name:focus,
+.user-menu__logout:hover,
+.user-menu__logout:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.user-menu__signin:active,
+.user-menu__user-name:active,
+.user-menu__logout:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .user-menu__in-account .user-menu__list-item:first-child {
   margin-right: 22px;
 }
@@ -319,7 +355,25 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-/*Блок kart*/
+.compare__link:hover::before,
+.compare__link:focus::before {
+  opacity: 0.6;
+}
+
+.compare__link:active::before {
+  opacity: 0.3;
+}
+
+.compare__link:hover,
+.compare__link:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.compare__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*Блок cart*/
 .cart {
   padding-left: 23px;
 }
@@ -333,4 +387,22 @@ input[type="radio"].visually-hidden {
   height: 12px;
   background-image: url("../img/icon/cart.svg");
   background-repeat: no-repeat;
+}
+
+.cart__link:hover::before,
+.cart__link:focus::before {
+  opacity: 0.6;
+}
+
+.cart__link:active::before {
+  opacity: 0.3;
+}
+
+.cart__link:hover,
+.cart__link:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cart__link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
