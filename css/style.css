@@ -62,13 +62,15 @@ input[type="radio"].visually-hidden {
 }
 
 .wrapper__header,
-.wrapper__promo-slider {
+.wrapper__promo-slider,
+.wrapper__popular-sections {
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.wrapper__promo-slider {
+.wrapper__promo-slider,
+.wrapper__popular-sections {
   margin-top: 0;
 }
 
@@ -527,7 +529,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   width: 1040px;
   padding-top: 99px;
-  padding-bottom: 100px;
+  padding-bottom: 113px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -716,16 +718,21 @@ input[type="radio"].visually-hidden {
   z-index: -1;
 }
 
+.slide__about-product-link:hover::before,
+.slide__about-product-link:focus::before {
+  height: 40px;
+}
+
+.slide__about-product-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /*Блок table-property*/
 .table-property {
   border-collapse: collapse;
   text-align: left;
   table-layout: fixed;
   width: 460px;
-}
-
-.table-property__row {
-
 }
 
 .table-property__table-data {
@@ -756,4 +763,143 @@ input[type="radio"].visually-hidden {
   line-height: 20px;
 
   color: #464646;
+}
+
+
+/*Блок popular-sections*/
+.popular-sections {
+  width: 1160px;
+}
+
+.popular-sections__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  min-height: 240px;
+  justify-content: space-between;
+}
+
+.popular-sections__item {
+  position: relative;
+  width: 160px;
+  vertical-align: bottom;
+}
+
+.popular-sections__item:last-child {
+
+}
+
+.popular-sections__link {
+  display: block;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 193px;
+  letter-spacing: 0.2px;
+}
+
+.popular-sections__link_text-width {
+  padding-right: 35px;
+}
+
+.popular-sections__link::before {
+  position: absolute;
+  content: "";
+  width: 160px;
+  height: 160px;
+  top: 0;
+  left: 0;
+  background-color: #f7e296;
+}
+
+.popular-sections__item:nth-child(1) .popular-sections__link::after {
+  position: absolute;
+  content: "";
+  width: 97px;
+  height: 55px;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  background-image: url("../img/decor/popular-sections/popular-vr.svg");
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.popular-sections__item:nth-child(2) .popular-sections__link::after {
+  position: absolute;
+  content: "";
+  width: 86px;
+  height: 117px;
+  top: 17%;
+  left: 52%;
+  transform: translateX(-51%);
+  background-image: url("../img/decor/popular-sections/popular-selfie.svg");
+  background-repeat: no-repeat;
+}
+
+.popular-sections__item:nth-child(3) .popular-sections__link::after {
+  position: absolute;
+  content: "";
+  width: 71px;
+  height: 87px;
+  top: 16%;
+  left: 53%;
+  transform: translateX(-50%);
+  background-image: url("../img/decor/popular-sections/popular-action.svg");
+  background-repeat: no-repeat;
+}
+
+.popular-sections__item:nth-child(4) .popular-sections__link::after {
+  position: absolute;
+  content: "";
+  width: 107px;
+  height: 65px;
+  top: 21%;
+  left: 52%;
+  transform: translateX(-50%);
+  background-image: url("../img/decor/popular-sections/popular-fitness-bracelet.svg");
+  background-repeat: no-repeat;
+}
+
+.popular-sections__item:nth-child(5) .popular-sections__link::after {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 98px;
+  top: 13%;
+  left: 52%;
+  transform: translateX(-50%);
+  background-image: url("../img/decor/popular-sections/popular-whatch.svg");
+  background-repeat: no-repeat;
+}
+
+.popular-sections__item:nth-child(6) .popular-sections__link::after {
+  position: absolute;
+  content: "";
+  width: 132px;
+  height: 69px;
+  top: 20%;
+  left: 51%;
+  transform: translateX(-50%);
+  background-image: url("../img/decor/popular-sections/popular-quadcopter.svg");
+  background-repeat: no-repeat;
+}
+
+.popular-sections__item:nth-child(n) .popular-sections__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.popular-sections__item:nth-child(n) .popular-sections__link:hover::before,
+.popular-sections__item:nth-child(n) .popular-sections__link:focus::before {
+  background-color: #f0c52e;
+}
+
+.popular-sections__item:nth-child(n) .popular-sections__link:active::before {
+  background-color: #f0c52e;
+}
+
+.popular-sections__item:nth-child(n) .popular-sections__link:active::after {
+  opacity: 0.3;
 }
