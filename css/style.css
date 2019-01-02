@@ -720,13 +720,16 @@ input[type="radio"].visually-hidden {
 .table-property {
   border-collapse: collapse;
   text-align: left;
+  table-layout: fixed;
+  width: 460px;
 }
 
 .table-property__row {
-  width: 150px;
+
 }
 
 .table-property__table-data {
+  box-sizing: border-box;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
   font-size: 36px;
@@ -736,22 +739,16 @@ input[type="radio"].visually-hidden {
   padding-bottom: 6px;
 }
 
-.table-property__table-data:nth-child(1),
-.table-property__table-head:nth-child(1) {
-  width: 253px;
+.table-property__table-data {
+  width: 160px;
 }
 
-.table-property__table-data:nth-child(2),
-.table-property__table-head:nth-child(2) {
-  width: 154px;
+.table-property__table-data:nth-child(2) {
+  width: 140px;
 }
 
-.table-property__table-head:last-child {
-  width: 332px;
-}
-
-.table-property__table-data:last-child {
-  margin-right: auto;
+.table-property__table-data_width {
+  width: 74px;
 }
 
 .table-property__table-head {
