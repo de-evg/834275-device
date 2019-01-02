@@ -66,7 +66,7 @@
         <div class="slide__content">
           <p class="slide__slogan">Делай селфи, как Бен Стиллер!</p>
           <p class="slide__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <a class="slide__about-product-link" href="#">Подробнее</a>
+          <a class="slide__about-product-link button" href="#">Подробнее</a>
           <table class="slide__product-property table-property">
             <tr class="table-property__row">
               <td class="table-property__table-data">8,5 м</td>
@@ -86,7 +86,7 @@
         <div class="slide__content">
           <p class="slide__slogan">Худеем правильно!</p>
           <p class="slide__description slide__description-2_max-width">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-          <a class="slide__about-product-link" href="#">Подробнее</a>
+          <a class="slide__about-product-link button" href="#">Подробнее</a>
           <table class="slide__product-property table-property">
             <tr class="table-property__row">
               <td class="table-property__table-data">48 часов</td>
@@ -102,7 +102,7 @@
         <div class="slide__content">
           <p class="slide__slogan slide__slogan_max-width">Порхает как бабочка, жалит как пчела!</p>
           <p class="slide__description slide__description-3_max-width">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-          <a class="slide__about-product-link" href="#">Подробнее</a>
+          <a class="slide__about-product-link button" href="#">Подробнее</a>
           <table class="slide__product-property table-property">
             <tr class="table-property__row">
               <td class="table-property__table-data table-property__table-data_width">800 м</td>
@@ -129,28 +129,33 @@
         </ul>
       </div>
     </section>
-    <section class="services-container">
-      <input id="delivery" type="radio" name="service" checked>
-      <input id="garanty" type="radio" name="service">
-      <input id="credit" type="radio" name="service">
-      <div class="services">
-        <div class="services__toggle">
-          <label class="delivery-toggle" for="delivery">Доствавка</label>
-          <label class="garanty-toggle" for="garanty">Гарантия</label>
-          <label class="credit-toggle" for="credit">Кредит</label>
-        </div>
-        <div class="services__items services-items">
-          <div class="services-items__item">
-            <h3 class="services-items__title">Доставка</h3>
-            <p class="services-items__content">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-          </div>
-          <div class="services-items__item">
-            <h3 class="services-items__title">Гарантия</h3>
-            <p class="services-items__content">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-          </div>
-          <div class="services-items__item">
-            <h3 class="services-items__title">Кредит</h3>
-            <p class="services-items__content">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+    <section>
+      <div class="wrapper__decoration_background-color">
+        <div class="wrapper__services services">
+          <input id="delivery" type="radio" name="service" checked>
+          <input id="garanty" type="radio" name="service">
+          <input id="credit" type="radio" name="service">
+          <div class="services__container">
+            <div class="services__toggle">
+              <label class="delivery-toggle button" for="delivery">Доствавка</label>
+              <label class="garanty-toggle button" for="garanty">Гарантия</label>
+              <label class="credit-toggle button" for="credit">Кредит</label>
+            </div>
+            <div class="services__items services-items">
+              <div class="services-items__item">
+                <h3 class="services-items__title">Доставка</h3>
+                <p class="services-items__content">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </div>
+              <div class="services-items__item">
+                <h3 class="services-items__title">Гарантия</h3>
+                <p class="services-items__content">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.</p>
+                <p class="services-items__content">Товар, не дом, конечно же.</p>
+              </div>
+              <div class="services-items__item">
+                <h3 class="services-items__title">Кредит</h3>
+                <p class="services-items__content">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

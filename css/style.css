@@ -38,8 +38,6 @@ body {
   line-height: 30px;
   min-width: 1200px;
   margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 a {
@@ -63,15 +61,15 @@ input[type="radio"].visually-hidden {
 
 .wrapper__header,
 .wrapper__promo-slider,
-.wrapper__popular-sections {
-  margin-top: 40px;
+.wrapper__popular-sections,
+.wrapper__services {
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
 }
 
-.wrapper__promo-slider,
-.wrapper__popular-sections {
-  margin-top: 0;
+.wrapper__header {
+  margin-top: 40px;
 }
 
 /*Блок header*/
@@ -692,7 +690,10 @@ input[type="radio"].visually-hidden {
 
 .slide__about-product-link {
   position: relative;
+  margin-bottom: 50px;
+}
 
+.button {
   width: 132px;
 
   font-family: "Gilroy", "Arial", sans-serif;
@@ -703,10 +704,9 @@ input[type="radio"].visually-hidden {
   letter-spacing: 3.6px;
 
   padding: 5px 44px;
-  margin-bottom: 50px;
 }
 
-.slide__about-product-link::before {
+.button::before {
   position: absolute;
   content: "";
   width: 220px;
@@ -718,12 +718,12 @@ input[type="radio"].visually-hidden {
   z-index: -1;
 }
 
-.slide__about-product-link:hover::before,
-.slide__about-product-link:focus::before {
+.button:hover::before,
+.button:focus::before {
   height: 40px;
 }
 
-.slide__about-product-link:active {
+.button:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -784,10 +784,6 @@ input[type="radio"].visually-hidden {
   position: relative;
   width: 160px;
   vertical-align: bottom;
-}
-
-.popular-sections__item:last-child {
-
 }
 
 .popular-sections__link {
@@ -903,3 +899,154 @@ input[type="radio"].visually-hidden {
 .popular-sections__item:nth-child(n) .popular-sections__link:active::after {
   opacity: 0.3;
 }
+
+/*Блок services*/
+.wrapper__decoration_background-color {
+  position: relative;
+}
+
+.wrapper__decoration_background-color::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 288px;
+  background-color: #e5e5e5;
+  top: 181px;
+  z-index: -2;
+}
+
+#delivery,
+#garanty,
+#credit {
+  display: none;
+}
+
+.services {
+  width: 1160px;
+  min-height: 387px;
+}
+
+.services__container {
+  display: flex;
+}
+
+.services__toggle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 115px;
+  padding-top: 164px;
+  padding-bottom: 64px;
+}
+
+.services__toggle:after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 319px;
+  top: 81px;
+  left: 278px;
+  background-color: #000000;
+}
+
+.delivery-toggle,
+.garanty-toggle,
+.credit-toggle {
+  position: relative;
+}
+
+.delivery-toggle {
+  letter-spacing: 1.8px;
+  padding-left: 20px;
+  padding-right: 9px;
+  margin-bottom: 30px;
+}
+
+.garanty-toggle {
+  letter-spacing: 3.8px;
+  padding-left: 25px;
+  padding-right: 4px;
+  margin-bottom: 31px;
+}
+
+.credit-toggle {
+  letter-spacing: 3.8px;
+  padding-left: 38px;
+  padding-right: 0;
+}
+
+.delivery-toggle::before,
+.garanty-toggle::before,
+.credit-toggle::before {
+  width: 160px;
+}
+
+.delivery-toggle:active,
+.garanty-toggle:active,
+.credit-toggle:active {
+  color: #f7e184;
+}
+
+.delivery-toggle:active::before,
+.garanty-toggle:active::before,
+.credit-toggle:active::before {
+  width: 278px;
+  background-color: #000000;
+}
+
+
+/*Блок services-items*/
+.services-items {
+  padding-top: 154px;
+}
+
+.services-items__item:nth-child(n) {
+  display: none;
+}
+
+#delivery:checked ~ .services__container .services-items__item:nth-child(1),
+#garanty:checked ~ .services__container .services-items__item:nth-child(2),
+#credit:checked ~ .services__container .services-items__item:nth-child(3) {
+  display: block;
+}
+
+#delivery:checked ~ .services__container {
+  background-image: url("../img/decor/services/delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 959px 166px;
+}
+
+#garanty:checked ~ .services__container {
+  background-image: url("../img/decor/services/warranty.svg");
+  background-repeat: no-repeat;
+  background-position: 944px 142px;
+}
+
+#credit:checked ~ .services__container {
+  background-image: url("../img/decor/services/credit.svg");
+  background-repeat: no-repeat;
+  background-position: 935px 143px;
+}
+
+.services-items__title {
+  margin: 0;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 1px;
+
+  padding-left: 117px;
+  margin-bottom: 31px;
+}
+
+.services-items__content {
+  margin: 0;
+  padding-left: 116px;
+  padding-right: 315px;
+
+  color: #464646;
+  letter-spacing: 0.3px;
+}
+
