@@ -124,12 +124,12 @@ input[type="radio"].visually-hidden {
 }
 
 /*Блок logo*/
-.logo__image:hover,
-.logo__image:focus {
+.logo:hover,
+.logo:focus {
   opacity: 0.6;
 }
 
-.logo__image:active {
+.logo:active {
   opacity: 0.3;
 }
 
@@ -446,29 +446,32 @@ input[type="radio"].visually-hidden {
 .site-navigation__item:first-child {
   position: relative;
   margin-right: 290px;
+}
+
+.site-navigation__item:first-child .site-navigation__link:first-of-type {
   padding-right: 32px;
 }
 
-.site-navigation__item:first-child::after {
+.site-navigation__item:first-child > .site-navigation__link::after {
   position: absolute;
   content: "";
   width: 16px;
   height: 2px;
   top: 11px;
   left: 231px;
-  background-color: #000000;
-  opacity: 0.3;
+  background-color: #b8a974;
+
 }
 
-.site-navigation__item:first-child::before {
+.site-navigation__item:first-child > .site-navigation__link::before {
   position: absolute;
   content: "";
   width: 2px;
   height: 16px;
   top: 4px;
   left: 238px;
-  background-color: #000000;
-  opacity: 0.3;
+  background-color: #b8a974;
+
 }
 
 .site-navigation__item:nth-child(2) {
@@ -513,6 +516,13 @@ input[type="radio"].visually-hidden {
 
   background-color: #f7e296;
 }
+
+/*Отображение submenu*/
+.submenu-show {
+  display: flex;
+  z-index: 2;
+}
+/*end Отображение submenu*/
 
 .site-navigation-item__submenu-item {
   flex-basis: 200px;
@@ -986,15 +996,27 @@ input[type="radio"].visually-hidden {
   width: 160px;
 }
 
+#delivery:checked ~ .services__container .delivery-toggle::before,
+#garanty:checked ~ .services__container .garanty-toggle::before,
+#credit:checked ~ .services__container .credit-toggle::before {
+  height: 40px;
+}
+
 .delivery-toggle:active,
 .garanty-toggle:active,
-.credit-toggle:active {
+.credit-toggle:active,
+#delivery:checked ~ .services__container .delivery-toggle,
+#garanty:checked ~ .services__container .garanty-toggle,
+#credit:checked ~ .services__container .credit-toggle {
   color: #f7e184;
 }
 
 .delivery-toggle:active::before,
 .garanty-toggle:active::before,
-.credit-toggle:active::before {
+.credit-toggle:active::before,
+#delivery:checked ~ .services__container .delivery-toggle::before,
+#garanty:checked ~ .services__container .garanty-toggle::before,
+#credit:checked ~ .services__container .credit-toggle::before {
   width: 278px;
   background-color: #000000;
 }
@@ -1264,6 +1286,15 @@ input[type="radio"].visually-hidden {
   background-color: #ffc600;
 }
 
+.footer__logo:hover,
+.footer__logo:focus {
+  opacity: 0.6;
+}
+
+.footer__logo:active {
+  opacity: 0.3;
+}
+
 .footer__logo_postion {
   margin-bottom: 20px;
 }
@@ -1497,4 +1528,5 @@ input[type="radio"].visually-hidden {
 .site-developed:active {
   fill: rgba(255, 198, 0, 0.3);
 }
+
 
