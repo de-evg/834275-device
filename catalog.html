@@ -28,9 +28,10 @@
       <div class="header-top__compare-link compare"><a class="compare__link" href="#">Сравнить</a></div>
       <div class="header-top__cart-link cart"><a class="cart__link" href="#">Корзина</a></div>
     </div>
-    <div class="header-main">
+    <div class="header-main header-main_min-padding">
       <ul class="header-main__site-navigation site-navigation">
-        <li class="site-navigation__item site-navigation-item"><a class="site-navigation__link" href="#" aria-label="Каталог товаров">Каталог товаров</a>
+        <li class="site-navigation__item site-navigation-item">
+          <a class="site-navigation__link submenu-link" href="#" aria-label="Каталог товаров">Каталог товаров</a>
           <div class="site-navigation-item__submenu">
             <div class="site-navigation-item__submenu-item">
               <a class="site-navigation__link" href="#">Виртуальная реальность</a>
@@ -52,13 +53,15 @@
       </ul>
     </div>
   </header>
-  <main>
-    <h1 class="main__title">Моноподы для селфи</h1>
-    <ul class="breadcrumbs">
-      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
-      <li class="breadcrumbs__item breadcrumbs__item_current">Моноподы для селфи</li>
-    </ul>
+  <main class="wrapper">
+    <div class="wrapper__page-title page-title">
+      <h1 class="main__title">Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
+        <li class="breadcrumbs__item breadcrumbs__item_current">Моноподы для селфи</li>
+      </ul>
+    </div>
     <section>
       <form class="filter" action="#" method="post">
         <h2 class="form-title">Фильтр:</h2>
@@ -199,5 +202,15 @@
         </div>
       </div>
     </footer>
+    <script>
+      if (document.querySelector(".site-navigation-item__submenu") !== null) {
+        var submenu = document.querySelector(".site-navigation-item__submenu");
+        var submenu_link = document.querySelector(".submenu-link");
+        submenu_link.addEventListener("click", function(evt) {
+          evt.preventDefault();
+          submenu.classList.toggle("submenu-show");
+        })
+      }
+    </script>
   </body>
   </html>

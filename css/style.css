@@ -65,7 +65,8 @@ input[type="radio"].visually-hidden {
 .wrapper__services,
 .wrapper__brands,
 .wrapper__about-company,
-.wrapper__footer {
+.wrapper__footer,
+.wrapper__page-title {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -138,7 +139,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   width: 414px;
-
 }
 
 .main-search__icon-search {
@@ -423,6 +423,10 @@ input[type="radio"].visually-hidden {
   padding-bottom: 163px;
 }
 
+.header-main_min-padding {
+  padding-bottom: 50px;
+}
+
 .header-main__site-navigation {
   display: flex;
   margin: 0;
@@ -460,7 +464,6 @@ input[type="radio"].visually-hidden {
   top: 11px;
   left: 231px;
   background-color: #b8a974;
-
 }
 
 .site-navigation__item:first-child > .site-navigation__link::before {
@@ -1529,4 +1532,63 @@ input[type="radio"].visually-hidden {
   fill: rgba(255, 198, 0, 0.3);
 }
 
+/*Заголовок каталога и хлебные крошки */
+.page-title {
+  width: 1160px;
+  padding-top: 37px;
+  padding-bottom: 26px;
+  padding-left: 118px;
+}
 
+.main__title {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.7px;
+}
+
+.breadcrumbs {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  margin-right: 40px;
+
+  list-style: none;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  right: -21px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 7px;
+  background-image: url("../img/icon/nav-arrow.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs__link,
+.breadcrumbs__item_current {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs__link:active {
+  color: rgba(0, 0, 0, 0.1);
+}
