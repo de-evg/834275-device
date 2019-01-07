@@ -66,7 +66,8 @@ input[type="radio"].visually-hidden {
 .wrapper__brands,
 .wrapper__about-company,
 .wrapper__footer,
-.wrapper__page-title {
+.wrapper__page-title,
+.wrapper__catalog {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -1534,7 +1535,7 @@ input[type="radio"].visually-hidden {
 
 /*Заголовок каталога и хлебные крошки */
 .page-title {
-  width: 1160px;
+  width: 1042px;
   padding-top: 37px;
   padding-bottom: 26px;
   padding-left: 118px;
@@ -1591,4 +1592,199 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs__link:active {
   color: rgba(0, 0, 0, 0.1);
+}
+
+/*Блок Каталог*/
+.catalog {
+  display: flex;
+}
+
+.catalog__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper__catalog-title,
+.wrapper__catalog-filter {
+  flex-basis: 36.8%;
+  text-align: right;
+}
+
+.wrapper__catalog-sorting,
+.wrapper__catalog-main {
+  flex-basis: 63.2%;
+  text-align: left;
+}
+
+.catalog__filter {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Блок Фильтр*/
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 268px;
+}
+
+.filter__title {
+  margin: 0;
+  padding-left: 100px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #dcdcdc;
+}
+
+.filter__content {
+  background-color: #efefef;
+}
+
+.filter__cost-range,
+.filter__color,
+.filter__bluetooth {
+  border: none;
+}
+
+.filter__item-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.filter__label {
+  font-size: 14px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.filter__button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  z-index: 1;
+}
+
+/*Блок range-scale*/
+.cost-range_range {
+  position: relative;
+  width: 196px;
+  height: 2px;
+  background-color: #dbdbdb;
+  margin: 30px 0px;
+}
+
+.button-min-cost {
+  position: absolute;
+  border: none;
+  width: 20px;
+  height: 23px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  background-image: url("../img/icon/filter-button.svg");
+  background-repeat: no-repeat;
+}
+
+.button-max-cost {
+  position: absolute;
+  border: none;
+  width: 20px;
+  height: 23px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  background-image: url("../img/icon/filter-button.svg");
+  background-repeat: no-repeat;
+}
+
+.cost-range__input-min-cost {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+
+  background-color: transparent;
+  border: none;
+
+  display: inline-block;
+  width: 85px;
+}
+
+.cost-range__input-max-cost {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+
+  background-color: transparent;
+  border: none;
+
+  display: inline-block;
+  width: 85px;
+}
+
+/*Блок фильтр по цвету*/
+.filter__color-items {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Блок фильтр наличия bluetoth*/
+.filter__bluetooth-items {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Блок Сортировка+Каталог*/
+.catalog__content {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Блок сортировка*/
+.sorting {
+  display: flex;
+ background-color: #efefef;
+}
+
+.sorting__title {
+  margin: 0;
+  padding-left: 100px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.sorting-buttons__item {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+/*Блок catalog__main*/
+.wrapper__catalog-main {
+  background-color: #ffffff;
+}
+
+.catalog__main {
+
+  padding-top: 70px;
+  padding-left: 72px;
+  display: flex;
+  flex-wrap: wrap;
 }

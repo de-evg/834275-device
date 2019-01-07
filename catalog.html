@@ -62,51 +62,71 @@
         <li class="breadcrumbs__item breadcrumbs__item_current">Моноподы для селфи</li>
       </ul>
     </div>
-    <section>
-      <form class="filter" action="#" method="post">
-        <h2 class="form-title">Фильтр:</h2>
-        <fieldset class="filter__cost-range">
-          <legend>Стоимость</legend>
-        </fieldset>
-        <fieldset class="filter__color">
-          <legend>Цвет</legend>
-          <input id="color-black" type="checkbox" name="black">
-          <label for="color-black">Черный</label>
 
-          <input id="color-white" type="checkbox" name="white">
-          <label for="color-white">Белый</label>
-
-          <input id="color-blue" type="checkbox" name="blue">
-          <label for="color-blue">Синий</label>
-
-          <input id="color-red" type="checkbox" name="red">
-          <label for="color-red">Красный</label>
-
-          <input id="color-rose" type="checkbox" name="rose">
-          <label for="color-rose">Розовый</label>
-        </fieldset>
-        <fieldset class="filter__bluetooth">
-          <legend>Bluetooth</legend>
-          <input id="bluetooth_yes" type="radio" name="bluetooth" checked>
-          <label for="bluetooth_yes">Есть</label>
-          <input id="bluetooth_no" type="radio" name="bluetooth">
-          <label for="bluetooth_no">Нет</label>
-        </fieldset>
-        <button class="button">Показать</button>
-      </form>
-    </section>
-    <section>
-      <div class="sorting">
-        <h2 class="sorting__title">Сортировка:</h2>
-        <div class="sorting__buttons sorting-buttons">
-          <a class="sorting-buttons__item" href="#">По цене</a>
-          <a class="sorting-buttons__item" href="#">По типу</a>
-          <a class="sorting-buttons__item" href="#">По популярности</a>
-          <a class="sorting-buttons__item" href="#" aria-label="Сортировка по возрастанию">По возрастанию</a>
-          <a class="sorting-buttons__item" href="#" aria-label="Сортировка по убыванию">По убыванию</a>
-        </div>
+    <div class="catalog__container">
+      <div class="wrapper__catalog-title">
+        <h2 class="filter__title">Фильтр:</h2>
       </div>
-      <div class="catalog">
+
+      <div class="wrapper__catalog-sorting">
+        <section>
+          <div class="sorting">
+            <h2 class="sorting__title">Сортировка:</h2>
+            <div class="sorting__buttons sorting-buttons">
+              <a class="sorting-buttons__item" href="#">По цене</a>
+              <a class="sorting-buttons__item" href="#">По типу</a>
+              <a class="sorting-buttons__item" href="#">По популярности</a>
+              <a class="sorting-buttons__item" href="#" aria-label="Сортировка по возрастанию">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                 <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
+               </svg>
+             </a>
+             <a class="sorting-buttons__item" href="#" aria-label="Сортировка по убыванию">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrapper__catalog-filter">
+      <div class="filter__content">
+        <form action="#" method="post">
+          <fieldset class="filter__cost-range cost-range">
+            <legend class="filter__item-title">Стоимость</legend>
+            <div class="cost-range_range">
+              <button class="button-min-cost"></button>
+              <button class="button-max-cost"></button>
+            </div>
+            <input class="cost-range__input-min-cost" type="text" name="min-cost" placeholder="от 0">
+            <input class="cost-range__input-max-cost" type="text" name="max-cost" placeholder="до 5000">
+          </fieldset>
+          <fieldset class="filter__color">
+            <legend class="filter__item-title">Цвет</legend>
+            <div class="filter__color-items">
+              <label class="filter__label" for="color-black"><input id="color-black" type="checkbox" name="black">Черный</label>
+              <label class="filter__label" for="color-white"><input id="color-white" type="checkbox" name="white">Белый</label>
+              <label class="filter__label" for="color-blue"><input id="color-blue" type="checkbox" name="blue">Синий</label>
+              <label class="filter__label" for="color-red"><input id="color-red" type="checkbox" name="red">Красный</label>
+              <label class="filter__label" for="color-rose"><input id="color-rose" type="checkbox" name="rose">Розовый</label>
+            </div>
+          </fieldset>
+          <fieldset class="filter__bluetooth">
+            <legend class="filter__item-title">Bluetooth</legend>
+            <div class="filter__bluetooth-items">
+              <label class="filter__label" for="bluetooth_yes"><input id="bluetooth_yes" type="radio" name="bluetooth" checked>Есть</label>
+              <label class="filter__label" for="bluetooth_no"><input id="bluetooth_no" type="radio" name="bluetooth">Нет</label>
+            </div>
+          </fieldset>
+          <button class="filter__button button" type="submit">Показать</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="wrapper__catalog-main">
+      <div class="catalog__main">
         <article class="catalog__item catalog-item">
           <img class="catalog-item__image" src="img/catalog/selfie-stick.jpg" width="360" height="380" alt="Изображение любительской селфи-палки">
           <h3 class="catalog-item__title">Любительская селфи-палка</h3>
@@ -137,11 +157,13 @@
           <li class="pagination__item"><a href="#">Вперед</a></li>
         </ul>
       </div>
-    </section>
-  </main>
-  <footer class="wrapper__footer-decoration_background">
-    <div class="wrapper__footer footer">
-      <div class="footer__container">
+    </div>
+  </div>
+
+</main>
+<footer class="wrapper__footer-decoration_background">
+  <div class="wrapper__footer footer">
+    <div class="footer__container">
         <div class="footer__container-left">
           <a class="footer__logo footer__logo_postion" href="index.html"><img class="footer__logo" src="img/logo-footer.png" width="163" height="36" alt="Логотип интернет-магазина Device"></a>
           <p class="footer__adress">г. Москва, ул. Строителей, 15</p>
@@ -162,14 +184,14 @@
           <div class="footer__buttons">
             <div class="footer__user-menu user-menu">
               <a class="user-menu__button user-menu__button_color_white" href="#">
-                <svg class="user-menu__icon"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
+                <svg class="user-menu__icon"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
                   <path class="user-menu__icon_color_yellow" fill="#272525" d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
                   C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z"/>
                 </svg>Войти</a>
               </div>
               <div class="footer__compare-link compare-link">
                 <a class="compare-link_button compare-link__button_color_white" href="#">
-                  <svg class="compare-link__icon compare-link__icon_color_yellow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="compare-link__icon compare-link__icon_color_yellow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
                   <rect x="8" y="2" width="1.984" height="8"/>
                   <rect y="3" width="1.984" height="7"/>
@@ -178,7 +200,7 @@
               </div>
               <div class="footer__kart-link kart-link">
                 <a class="kart-link__button kart-link__button_color_white" href="#">
-                  <svg class="kart-link__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="kart-link__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve">
                   <g>
                     <path class="kart-link__icon_color_yellow" d="M11.864,3.017c-0.082-0.098-0.203-0.154-0.327-0.154H9.225V4.09c0,0.563-0.484,1.022-1.08,1.022
@@ -195,7 +217,7 @@
           </div>
           <p class="phone">Тел.: +7 (495) 495-95-95</p>
           <p class="footer__site-developed"><a class="site-developed" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Разработчик сайта HTML Academy">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
               <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
             </svg></a></p>
           </div>
