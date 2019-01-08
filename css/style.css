@@ -58,6 +58,10 @@ input[type="radio"].visually-hidden {
   white-space: nowrap;
   border: 0;
 }
+.wrapper__catalog {
+  width: 100%;
+  position: relative;
+}
 
 .wrapper__header,
 .wrapper__promo-slider,
@@ -71,6 +75,12 @@ input[type="radio"].visually-hidden {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.wrapper__catalog {
+  display: flex;
+  justify-content: center;
+  width: 1100px;
 }
 
 .wrapper__header {
@@ -1537,8 +1547,7 @@ input[type="radio"].visually-hidden {
 .page-title {
   width: 1042px;
   padding-top: 37px;
-  padding-bottom: 26px;
-  padding-left: 118px;
+  padding-bottom: 46px;
 }
 
 .main__title {
@@ -1596,23 +1605,47 @@ input[type="radio"].visually-hidden {
 
 /*Блок Каталог*/
 .catalog {
-  display: flex;
+  position: relative;
 }
 
-.catalog__container {
-  display: flex;
-  flex-wrap: wrap;
+.catalog__container:nth-of-type(1) {
+  min-width: 328px;
+  background-color: #efefef;
+
+}
+.catalog::before {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 100%;
+  background-color: #efefef;
+  z-index: -1;
+
+}
+
+.catalog__container:nth-of-type(2) {
+  min-width: 832px;
+}
+
+.catalog::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.08);
+  z-index: -1;
+  left: 0;
+  top: 0;
 }
 
 .wrapper__catalog-title,
 .wrapper__catalog-filter {
-  flex-basis: 36.8%;
+
   text-align: right;
 }
 
 .wrapper__catalog-sorting,
 .wrapper__catalog-main {
-  flex-basis: 63.2%;
   text-align: left;
 }
 
@@ -1623,25 +1656,30 @@ input[type="radio"].visually-hidden {
 
 /*Блок Фильтр*/
 .filter {
+  padding-top: 82px;
   display: flex;
   flex-direction: column;
-  width: 268px;
+  width: 270px;
 }
 
-.filter__title {
+.filter-title {
+  text-align: right;
   margin: 0;
-  padding-left: 100px;
+  padding-right: 177px;
+  padding-top: 23px;
+  padding-bottom: 23px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
   text-transform: uppercase;
+  letter-spacing: 3.7px;
 
   background-color: #dcdcdc;
 }
 
-.filter__content {
+.catalog-filter__content {
   background-color: #efefef;
 }
 
@@ -1649,15 +1687,32 @@ input[type="radio"].visually-hidden {
 .filter__color,
 .filter__bluetooth {
   border: none;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
 }
 
 .filter__item-title {
+  position: relative;
+  padding-right: 166px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  letter-spacing: 1.4px;
 }
+
+.filter__item-title::before {
+  position: absolute;
+  content: "";
+  width: 201px;
+  height: 2px;
+  background-color: #000000;
+  top: -13px;
+  left: 2px;
+}
+
 
 .filter__label {
   font-size: 14px;
@@ -1672,13 +1727,24 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 }
 
+.filter__checkbox_hidden,
+.filter__radio_hidden {
+  display: none;
+}
+
 /*Блок range-scale*/
+.cost-range {
+  padding-right: 10px;
+  padding-bottom: 6px;
+}
+
 .cost-range_range {
   position: relative;
-  width: 196px;
+  width: 206px;
   height: 2px;
   background-color: #dbdbdb;
-  margin: 30px 0px;
+  margin: 34px 58px;
+  margin-left: auto;
 }
 
 .button-min-cost {
@@ -1700,7 +1766,7 @@ input[type="radio"].visually-hidden {
   width: 20px;
   height: 23px;
   top: 50%;
-  right: 0;
+  right: 73px;
   transform: translateY(-50%);
   background-color: transparent;
   background-image: url("../img/icon/filter-button.svg");
@@ -1708,6 +1774,8 @@ input[type="radio"].visually-hidden {
 }
 
 .cost-range__input-min-cost {
+  padding-top: 11px;
+  padding-bottom: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -1721,6 +1789,9 @@ input[type="radio"].visually-hidden {
 }
 
 .cost-range__input-max-cost {
+  padding-top: 11px;
+  padding-right: 28px;
+  padding-bottom: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -1734,9 +1805,19 @@ input[type="radio"].visually-hidden {
 }
 
 /*Блок фильтр по цвету*/
+.filter-color {
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 .filter__color-items {
   display: flex;
   flex-direction: column;
+  width: 262px;
+  align-items: flex-end;
 }
 
 /*Блок фильтр наличия bluetoth*/
@@ -1753,27 +1834,49 @@ input[type="radio"].visually-hidden {
 
 /*Блок сортировка*/
 .sorting {
-  display: flex;
+ display: flex;
  background-color: #efefef;
 }
 
 .sorting__title {
   margin: 0;
-  padding-left: 100px;
+  padding-left: 72px;
+  padding-right: 50px;
+  padding-top: 23px;
+  padding-bottom: 23px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
   text-transform: uppercase;
+  letter-spacing: 3.7px;
+}
+
+.sorting-buttons {
+  padding-top: 19px;
+  padding-bottom: 21px;
 }
 
 .sorting-buttons__item {
+  margin-right: 25px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #000000;
+}
+
+.sorting-buttons__item:nth-of-type(3) {
+  margin-right: 229px;
+}
+
+.sorting-buttons__item:nth-of-type(4) {
+  margin-right: 15px;
+}
+
+.sorting-buttons__item:last-of-type {
+  margin-right: 0;
 }
 
 /*Блок catalog__main*/
