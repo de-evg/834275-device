@@ -70,8 +70,7 @@ input[type="radio"].visually-hidden {
 .wrapper__brands,
 .wrapper__about-company,
 .wrapper__footer,
-.wrapper__page-title,
-.wrapper__catalog {
+.wrapper__page-title {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -80,7 +79,8 @@ input[type="radio"].visually-hidden {
 .wrapper__catalog {
   display: flex;
   justify-content: center;
-  width: 1100px;
+  min-width: 1160px;
+  padding: 0 100%;
 }
 
 .wrapper__header {
@@ -1605,15 +1605,19 @@ input[type="radio"].visually-hidden {
 
 /*Блок Каталог*/
 .catalog {
-  position: relative;
+  display: flex;
+  justify-content: center;
+
 }
 
 .catalog__container:nth-of-type(1) {
-  min-width: 328px;
+  min-width: 331px;
   background-color: #efefef;
+  background-attachment: content-box;
 
 }
-.catalog::before {
+
+/*.catalog::before {
   position: absolute;
   content: "";
   width: 20%;
@@ -1621,7 +1625,7 @@ input[type="radio"].visually-hidden {
   background-color: #efefef;
   z-index: -1;
 
-}
+}*/
 
 .catalog__container:nth-of-type(2) {
   min-width: 832px;
@@ -1676,11 +1680,10 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   letter-spacing: 3.7px;
 
-  background-color: #dcdcdc;
 }
 
 .catalog-filter__content {
-  background-color: #efefef;
+  /*background-color: #efefef;*/
 }
 
 .filter__cost-range,
@@ -1835,7 +1838,6 @@ input[type="radio"].visually-hidden {
 /*Блок сортировка*/
 .sorting {
  display: flex;
- background-color: #efefef;
 }
 
 .sorting__title {
