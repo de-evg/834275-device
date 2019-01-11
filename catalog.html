@@ -62,7 +62,7 @@
         <li class="breadcrumbs__item breadcrumbs__item_current">Моноподы для селфи</li>
       </ul>
     </div>
-    <!-- КАТАЛОГ -->
+
     <div class="catalog-top catalog-top__bg-gradient_gray-lightgray">
       <div class="wrapper__catalog-top">
         <div class="catalog-top__container">
@@ -70,16 +70,16 @@
           <section class="sorting">
             <h2 class="sorting__title">Сортировка:</h2>
             <div class="sorting__buttons sorting-buttons">
-              <a class="sorting-buttons__item" href="#">По цене</a>
+              <a class="sorting-buttons__item sorting-buttons_active" href="#">По цене</a>
               <a class="sorting-buttons__item" href="#">По типу</a>
               <a class="sorting-buttons__item" href="#">По популярности</a>
               <a class="sorting-buttons__item" href="#" aria-label="Сортировка по возрастанию">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <svg class="sorting-buttons__icon_color" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
                   <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
                 </svg>
               </a>
               <a class="sorting-buttons__item" href="#" aria-label="Сортировка по убыванию">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <svg class="sorting-buttons__icon_color sorting-buttons_icon-active" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
                   <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
                 </svg>
               </a>
@@ -89,164 +89,163 @@
       </div>
     </div>
 
-<div class="catalog-main catalog-main__bg-gradient_lightgray-white">
-  <div class="wrapper__catalog-main">
-    <div class="catalog-main__container">
-      <form class="filter" action="#" method="post">
-        <fieldset class="filter__section cost-range">
-          <legend class="filter__item-title">Стоимость</legend>
-          <div class="cost-range_range">
-            <button class="button-min-cost"></button>
-            <button class="button-max-cost"></button>
-            <div class="filter__cost-input">
-              <input class="cost-range__input-min-cost" type="text" name="min-cost" placeholder="от 0">
-              <input class="cost-range__input-max-cost" type="text" name="max-cost" placeholder="до 5000">
+    <div class="catalog-main catalog-main__bg-gradient_lightgray-white">
+      <div class="wrapper__catalog-main">
+        <div class="catalog-main__container">
+          <form class="filter" action="#" method="post">
+            <fieldset class="filter__section cost-range">
+              <legend class="filter__item-title">Стоимость</legend>
+              <div class="cost-range_range">
+                <button class="button-min-cost"></button>
+                <button class="button-max-cost"></button>
+                <div class="filter__cost-input">
+                  <input class="cost-range__input-min-cost" type="text" name="min-cost" placeholder="от 0">
+                  <input class="cost-range__input-max-cost" type="text" name="max-cost" placeholder="до 5000">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter__section filter-color">
+              <legend class="filter__item-title filter-color__item-title_margin-bottom">Цвет</legend>
+              <div class="filter__color-items">
+                <input class="filter__checkbox visually-hidden" id="color-black" type="checkbox" name="black">
+                <label class="filter__label filter__checkbox-label" for="color-black">Черный</label>
+
+                <input class="filter__checkbox visually-hidden" id="color-white" type="checkbox" name="white">
+                <label class="filter__label filter__checkbox-label" for="color-white">Белый</label>
+
+                <input class="filter__checkbox visually-hidden" id="color-blue" type="checkbox" name="blue">
+                <label class="filter__label filter__checkbox-label" for="color-blue">Синий</label>
+
+                <input class="filter__checkbox visually-hidden" id="color-red" type="checkbox" name="red">
+                <label class="filter__label filter__checkbox-label" for="color-red">Красный</label>
+
+                <input class="filter__checkbox visually-hidden" id="color-rose" type="checkbox" name="rose">
+                <label class="filter__label filter__checkbox-label" for="color-rose">Розовый</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter__section filter__last-section_margin-bottom">
+              <legend class="filter__item-title">Bluetooth</legend>
+              <div class="filter__bluetooth-items">
+                <input class="filter__radio visually-hidden" id="bluetooth_yes" type="radio" name="bluetooth" checked>
+                <label class="filter__label filter__radio-label" for="bluetooth_yes">Есть</label>
+
+                <input class="filter__radio visually-hidden" id="bluetooth_no" type="radio" name="bluetooth">
+                <label class="filter__label filter__radio-label" for="bluetooth_no">Нет</label>
+              </div>
+            </fieldset>
+            <button class="filter__button button" type="submit">Показать</button>
+          </form>
+          <div class="catalog__container">
+            <div class="catalog__main">
+              <article class="catalog__item catalog-item">
+                <div class="catalog-item__inner">
+                  <div class="catalog-item__product-picture">
+                    <img class="catalog-item__image" src="img/catalog/selfie-stick.jpg" width="360" height="380" alt="Изображение любительской селфи-палки">
+                  </div>
+                  <div class="catalog-item__product-links">
+                    <a class="button catalog-item__cart-link" href="#">В корзину</a>
+                    <a class="catalog-item__compare-link" href="">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="catalog-item__info">
+                  <a class="catalog-item__title-link" href="#">
+                    <h3 class="catalog-item__title">Любительская селфи-палка</h3>
+                  </a>
+                  <span class="catalog-item__price">500 руб.</span>
+                </div>
+              </article>
+              <article class="catalog__item catalog-item">
+                <div class="catalog-item__inner">
+                  <div class="catalog-item__product-picture">
+                    <img class="catalog-item__image" src="img/catalog/selfie-stick-professional.jpg" width="360" height="380" alt="Изображение профессиональной селфи-палки">
+                  </div>
+                  <div class="catalog-item__product-links">
+                    <a class="button catalog-item__cart-link" href="#">В корзину</a>
+                    <a class="catalog-item__compare-link" href="">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="catalog-item__info">
+                  <a class="catalog-item__title-link" href="#">
+                    <h3 class="catalog-item__title catalog-item__width_short">Профессиональная селфи-палка</h3>
+                  </a>
+                  <span class="catalog-item__price">1 500 руб.</span>
+                </div>
+              </article>
+              <article class="catalog__item catalog-item catalog__last-item_no-margin-bottom">
+                <div class="catalog-item__inner">
+                  <div class="catalog-item__product-picture">
+                    <img class="catalog-item__image" src="img/catalog/selfie-stick-unsinkable.jpg" width="360" height="380" alt="Изображение непотопляемой селфи-палки">
+                  </div>
+                  <div class="catalog-item__product-links">
+                    <a class="button catalog-item__cart-link" href="#">В корзину</a>
+                    <a class="catalog-item__compare-link" href="">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="catalog-item__info">
+                  <a class="catalog-item__title-link" href="#">
+                    <h3 class="catalog-item__title ">Непотопляемая селфи-палка</h3>
+                  </a>
+                  <span class="catalog-item__price">2 500 руб.</span>
+                </div>
+              </article>
+              <article class="catalog__item catalog-item catalog__last-item_no-margin-bottom">
+                <div class="catalog-item__new-item">New</div>
+                <div class="catalog-item__inner">
+                  <div class="catalog-item__product-picture">
+                    <img class="catalog-item__image" src="img/catalog/selfie-stick-followme.jpg" width="360" height="380" alt="Изображение селфи-палки «Следуй за мной»">
+                  </div>
+                  <div class="catalog-item__product-links">
+                    <a class="button catalog-item__cart-link" href="#">В корзину</a>
+                    <a class="catalog-item__compare-link" href="">Добавить к сравнению</a>
+                  </div>
+                </div>
+                <div class="catalog-item__info">
+                  <a class="catalog-item__title-link" href="#">
+                    <h3 class="catalog-item__title catalog-item__width_short">Селфи-палка «Следуй за мной»</h3>
+                  </a>
+                  <span class="catalog-item__price">4 900 руб.</span>
+                </div>
+              </article>
+            </div>
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item pagnation__button-back"><a class="pagnation__link-back pagination__link" href="#">Назад</a></li>
+                <li class="pagination__item"><a class="pagination__link pagination__active" href="#">1</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                <li class="pagination__item"><a  class="pagination__link" href="#">3</a></li>
+                <li class="pagination__item pagnation__button-next"><a class="pagnation__link-next pagination__link" href="#">Вперед</a></li>
+              </ul>
             </div>
           </div>
-        </fieldset>
-
-        <fieldset class="filter__section filter-color">
-          <legend class="filter__item-title filter-color__item-title_margin-bottom">Цвет</legend>
-          <div class="filter__color-items">
-            <input class="filter__checkbox visually-hidden" id="color-black" type="checkbox" name="black">
-            <label class="filter__label filter__checkbox-label" for="color-black">Черный</label>
-
-            <input class="filter__checkbox visually-hidden" id="color-white" type="checkbox" name="white">
-            <label class="filter__label filter__checkbox-label" for="color-white">Белый</label>
-
-            <input class="filter__checkbox visually-hidden" id="color-blue" type="checkbox" name="blue">
-            <label class="filter__label filter__checkbox-label" for="color-blue">Синий</label>
-
-            <input class="filter__checkbox visually-hidden" id="color-red" type="checkbox" name="red">
-            <label class="filter__label filter__checkbox-label" for="color-red">Красный</label>
-
-            <input class="filter__checkbox visually-hidden" id="color-rose" type="checkbox" name="rose">
-            <label class="filter__label filter__checkbox-label" for="color-rose">Розовый</label>
-          </div>
-        </fieldset>
-
-        <fieldset class="filter__section filter__last-section_margin-bottom">
-          <legend class="filter__item-title">Bluetooth</legend>
-          <div class="filter__bluetooth-items">
-            <input class="filter__radio visually-hidden" id="bluetooth_yes" type="radio" name="bluetooth" checked>
-            <label class="filter__label filter__radio-label" for="bluetooth_yes">Есть</label>
-
-            <input class="filter__radio visually-hidden" id="bluetooth_no" type="radio" name="bluetooth">
-            <label class="filter__label filter__radio-label" for="bluetooth_no">Нет</label>
-          </div>
-        </fieldset>
-        <button class="filter__button button" type="submit">Показать</button>
-      </form>
-      <div class="catalog__container">
-        <div class="catalog__main">
-          <article class="catalog__item catalog-item">
-            <div class="catalog-item__inner">
-              <div class="catalog-item__product-picture">
-                <img class="catalog-item__image" src="img/catalog/selfie-stick.jpg" width="360" height="380" alt="Изображение любительской селфи-палки">
-              </div>
-              <div class="catalog-item__product-links">
-                <a class="button catalog-item__cart-link" href="#">В корзину</a>
-                <a class="catalog-item__compare-link" href="">Добавить к сравнению</a>
-              </div>
-            </div>
-            <div class="catalog-item__info">
-              <a class="catalog-item__title-link" href="#">
-                <h3 class="catalog-item__title">Любительская селфи-палка</h3>
-              </a>
-              <span class="catalog-item__price">500 руб.</span>
-            </div>
-          </article>
-          <article class="catalog__item catalog-item">
-            <div class="catalog-item__inner">
-              <div class="catalog-item__product-picture">
-                <img class="catalog-item__image" src="img/catalog/selfie-stick-professional.jpg" width="360" height="380" alt="Изображение профессиональной селфи-палки">
-              </div>
-              <div class="catalog-item__product-links">
-                <a class="button catalog-item__cart-link" href="#">В корзину</a>
-                <a class="catalog-item__compare-link" href="">Добавить к сравнению</a>
-              </div>
-            </div>
-            <div class="catalog-item__info">
-              <a class="catalog-item__title-link" href="#">
-                <h3 class="catalog-item__title catalog-item__width_short">Профессиональная селфи-палка</h3>
-              </a>
-              <span class="catalog-item__price">1 500 руб.</span>
-            </div>
-          </article>
-          <article class="catalog__item catalog-item catalog__last-item_no-margin-bottom">
-            <div class="catalog-item__inner">
-              <div class="catalog-item__product-picture">
-                <img class="catalog-item__image" src="img/catalog/selfie-stick-unsinkable.jpg" width="360" height="380" alt="Изображение непотопляемой селфи-палки">
-              </div>
-              <div class="catalog-item__product-links">
-                <a class="button catalog-item__cart-link" href="#">В корзину</a>
-                <a class="catalog-item__compare-link" href="">Добавить к сравнению</a>
-              </div>
-            </div>
-            <div class="catalog-item__info">
-              <a class="catalog-item__title-link" href="#">
-                <h3 class="catalog-item__title ">Непотопляемая селфи-палка</h3>
-              </a>
-              <span class="catalog-item__price">2 500 руб.</span>
-            </div>
-          </article>
-          <article class="catalog__item catalog-item catalog__last-item_no-margin-bottom">
-            <div class="catalog-item__new-item">New</div>
-            <div class="catalog-item__inner">
-              <div class="catalog-item__product-picture">
-                <img class="catalog-item__image" src="img/catalog/selfie-stick-followme.jpg" width="360" height="380" alt="Изображение селфи-палки «Следуй за мной»">
-              </div>
-              <div class="catalog-item__product-links">
-                <a class="button catalog-item__cart-link" href="#">В корзину</a>
-                <a class="catalog-item__compare-link" href="">Добавить к сравнению</a>
-              </div>
-            </div>
-            <div class="catalog-item__info">
-              <a class="catalog-item__title-link" href="#">
-                <h3 class="catalog-item__title catalog-item__width_short">Селфи-палка «Следуй за мной»</h3>
-              </a>
-              <span class="catalog-item__price">4 900 руб.</span>
-            </div>
-          </article>
-        </div>
-        <div class="pagination">
-          <ul class="pagination__list">
-            <li class="pagination__item"><a href="#">Назад</a></li>
-            <li class="pagination__item"><a class="pagination__active" href="#">1</a></li>
-            <li class="pagination__item"><a href="#">2</a></li>
-            <li class="pagination__item"><a href="#">3</a></li>
-            <li class="pagination__item"><a href="#">Вперед</a></li>
-          </ul>
         </div>
       </div>
     </div>
-  </div>
-</div>
-    <!-- ЗАКОНЧИЛСЯ КАТАЛОГ -->
   </main>
-<footer class="wrapper__footer-decoration_background">
-  <div class="wrapper__footer footer">
-    <div class="footer__container">
-      <div class="footer__container-left">
-        <a class="footer__logo footer__logo_postion" href="index.html"><img class="footer__logo" src="img/logo-footer.png" width="163" height="36" alt="Логотип интернет-магазина Device"></a>
-        <p class="footer__adress">г. Москва, ул. Строителей, 15</p>
-      </div>
-      <div class="footer__container-center">
-        <ul class="footer__site-navigation footer-navigation">
-          <li class="footer-navigation__item"><a class="footer-navigation__link" href="#">Доставка</a></li>
-          <li class="footer-navigation__item"><a class="footer-navigation__link" href="#">Гарантия</a></li>
-          <li class="footer-navigation__item"><a class="footer-navigation__link" href="#">Контакты</a></li>
-        </ul>
-        <ul class="footer__social-buttons social-buttons">
-          <li class="social-buttons__item"><a class="social-buttons__link social-button__fb" href="#" aria-label="Мы в facebook"></a></li>
-          <li class="social-buttons__item"><a class="social-buttons__link social-button__inst" href="#" aria-label="Мы в Instagram"></a></li>
-          <li class="social-buttons__item"><a class="social-buttons__link social-button__tw" href="#" aria-label="Мы в Twitter"></a></li>
-        </ul>
-      </div>
-      <div class="footer__container-right">
-        <div class="footer__buttons">
-          <div class="footer__user-menu user-menu">
-            <a class="user-menu__button user-menu__button_color_white" href="#">
+  <footer class="wrapper__footer-decoration_background">
+    <div class="wrapper__footer footer">
+      <div class="footer__container">
+        <div class="footer__container-left">
+          <a class="footer__logo footer__logo_postion" href="index.html"><img class="footer__logo" src="img/logo-footer.png" width="163" height="36" alt="Логотип интернет-магазина Device"></a>
+          <p class="footer__adress">г. Москва, ул. Строителей, 15</p>
+        </div>
+        <div class="footer__container-center">
+          <ul class="footer__site-navigation footer-navigation">
+            <li class="footer-navigation__item"><a class="footer-navigation__link" href="#">Доставка</a></li>
+            <li class="footer-navigation__item"><a class="footer-navigation__link" href="#">Гарантия</a></li>
+            <li class="footer-navigation__item"><a class="footer-navigation__link" href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer__social-buttons social-buttons">
+            <li class="social-buttons__item"><a class="social-buttons__link social-button__fb" href="#" aria-label="Мы в facebook"></a></li>
+            <li class="social-buttons__item"><a class="social-buttons__link social-button__inst" href="#" aria-label="Мы в Instagram"></a></li>
+            <li class="social-buttons__item"><a class="social-buttons__link social-button__tw" href="#" aria-label="Мы в Twitter"></a></li>
+          </ul>
+        </div>
+        <div class="footer__container-right">
+          <div class="footer__buttons">
+            <div class="footer__user-menu user-menu">
+              <a class="user-menu__button user-menu__button_color_white" href="#">
                 <svg class="user-menu__icon"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
                   <path class="user-menu__icon_color_yellow" fill="#272525" d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
                   C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z"/>
