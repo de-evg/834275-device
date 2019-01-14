@@ -20,7 +20,10 @@
         <button class="main-search__button" type="submit">Найти</button>
       </form>
       <div class="header-top__user-menu user-menu">
-        <ul class="user-menu__list user-menu__in-account">
+        <ul class="user-menu__list user-menu__account_not-logged">
+          <li class="user-menu__list-item"><a class="user-menu__signin user-menu__signin_color_black outline" href="#">Войти</a></li>
+        </ul>
+        <ul class="user-menu_show user-menu__list user-menu__in-account">
           <li class="user-menu__list-item"><a class="user-menu__user-name user-menu__login_color_black" href="#">Валентин Петухов</a></li>
           <li class="user-menu__list-item"><a class="user-menu__logout user-menu__logout_color_black user-menu__button_not_active" href="#">Выйти</a></li>
         </ul>
@@ -245,11 +248,25 @@
         <div class="footer__container-right">
           <div class="footer__buttons">
             <div class="footer__user-menu user-menu">
-              <a class="user-menu__button user-menu__button_color_white" href="#">
-                <svg class="user-menu__icon"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
-                  <path class="user-menu__icon_color_yellow" fill="#272525" d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
-                  C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z"/>
-                </svg>Войти</a>
+              <ul class="user-menu__list user-menu__account_not-logged">
+                <li class="user-menu__list-item">
+                  <a class="user-menu__button user-menu__button_color_white" href="#">
+                    <svg class="user-menu__icon"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
+                      <path class="user-menu__icon_color_yellow" fill="#272525" d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
+                      C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z"/>
+                    </svg>Войти</a>
+                  </li>
+                </ul>
+                <ul class="user-menu_show user-menu__list user-menu__in-account">
+                  <li class="user-menu__list-item user-menu__footer-list-item_width">
+                    <a class="user-menu__button user-menu__button_color_white" href="#">
+                      <svg class="user-menu__icon"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
+                        <path class="user-menu__icon_color_yellow" fill="#272525" d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
+                        C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z"/>
+                      </svg>Валентин Петухов</a>
+                    </li>
+                    <li class="user-menu__list-item"><a class="user-menu__button user-menu__button_color_white" href="#">Выйти</a></li>
+                  </ul>
               </div>
               <div class="footer__compare-link compare-link">
                 <a class="compare-link_button compare-link__button_color_white" href="#">
@@ -286,15 +303,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      if (document.querySelector(".site-navigation-item__submenu") !== null) {
-        var submenu = document.querySelector(".site-navigation-item__submenu");
-        var submenu_link = document.querySelector(".submenu-link");
-        submenu_link.addEventListener("click", function(evt) {
-          evt.preventDefault();
-          submenu.classList.toggle("submenu-show");
-        })
-      }
-    </script>
+    <script src="js/script.js"></script>
   </body>
   </html>

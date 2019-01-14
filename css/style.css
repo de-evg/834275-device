@@ -45,6 +45,10 @@ a {
   text-decoration: none;
 }
 
+.outline:focus {
+  outline: 2px solid lightblue;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -61,7 +65,7 @@ input[type="radio"].visually-hidden {
 
 input[type="checkbox"]:focus + label,
 input[type="radio"]:focus + label {
-  outline: 2px solid lightgray;
+  outline: 2px solid  lightblue;
 }
 
 .wrapper__catalog {
@@ -317,8 +321,12 @@ input[type="radio"]:focus + label {
 .user-menu__list {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: none;
   min-width: 150px;
+}
+
+.user-menu_show {
+  display: flex;
 }
 
 .user-menu__list-item {
@@ -957,12 +965,6 @@ input[type="radio"]:focus + label {
   z-index: -2;
 }
 
-#delivery,
-#garanty,
-#credit {
-  display: none;
-}
-
 .services {
   width: 1160px;
   min-height: 387px;
@@ -1468,6 +1470,10 @@ input[type="radio"]:focus + label {
   position: relative;
   min-width: 50px;
   padding-left: 11px;
+}
+
+.user-menu__footer-list-item_width {
+  width: 350px;
 }
 
 .user-menu__icon {
@@ -2239,3 +2245,140 @@ input[type="radio"]:focus + label {
 .pagnation__link-next:active {
   color: rgba(0, 0, 0, 0.3);
 }
+
+/*Общие классы для модальных окон*/
+.modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-map__google-map_hidden {
+  display: none;
+}
+
+.modal-show {
+  display: block;
+}
+
+.button-close-map,
+.button-close-google-map,
+.button-close-message {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-image: url("../img/icon/modal-close.svg");
+  background-color: transparent;
+  opacity: 0.5;
+  border: none;
+  top: 22px;
+  right: 22px;
+  cursor: pointer;
+}
+
+.button-close:hover,
+.button-close:focus {
+  opacity: 1;
+}
+
+.button-close:active {
+  opacity: 0.3;
+}
+
+/*Модалка Сообщение*/
+.modal-message {
+  width: 960px;
+  background-color: #ffffff;
+  z-index: 4;
+}
+
+.message-form {
+  width: 760px;
+  padding: 85px 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.message-form__user-name,
+.message-form__user-email,
+.message-form__user-message {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  list-style: 24px;
+}
+
+.message-form__user-input {
+  box-sizing: border-box;
+  display: block;
+  width: 360px;
+  height: 50px;
+  padding: 0 20px;
+  border: none;
+  background-color: #f2f2f2;
+  margin-bottom: 35px;
+}
+
+.message-form__user-input-message {
+  box-sizing: border-box;
+  display: block;
+  width: 760px;
+  height: 157px;
+  border: none;
+  background-color: #f2f2f2;
+  margin-bottom: 35px;
+  padding: 20px;
+}
+
+.message-form__user-input:hover,
+.message-form__user-input-message:hover {
+  background-color: #ebebeb;
+}
+
+.message-form__user-input:focus,
+.message-form__user-input-message:focus {
+  background-color: #ffffff;
+  border: 3px solid #f7e296;
+  outline: none;
+}
+
+.message-form__user-input:invalid,
+.message-form__user-input-message:invalid {
+  background-color: #f6dada;
+}
+
+.modal-button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 5px 37px;
+}
+
+.modal-button::before {
+  width: 200px;
+}
+
+.modal-message_shadow {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*Модалка Карта*/
+.modal-map {
+ z-index: 3;
+}
+
+.modal-map__button-close_opacity {
+ opacity: 0.5;
+}
+
+.modal-map_shadow {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-map__big-map {
+  vertical-align: bottom;
+}
+
