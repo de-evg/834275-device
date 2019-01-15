@@ -189,6 +189,7 @@ input[type="radio"]:focus + label {
   padding-left: 35px;
   background-color: transparent;
   border: 2px solid transparent;
+  outline-offset: 0;
 }
 
 .main-search__input:focus {
@@ -705,7 +706,7 @@ input[type="radio"]:focus + label {
 
 .slide__slogan {
   margin: 0;
-  padding-right: 100px;
+  padding-right: 97px;
   position: absolute;
   top: -131px;
 
@@ -718,7 +719,7 @@ input[type="radio"]:focus + label {
 }
 
 .slide__slogan_max-width {
-  min-width: 510px;
+  min-width: 520px;
 }
 
 .slide__description {
@@ -1969,31 +1970,29 @@ input[type="radio"]:focus + label {
 }
 
 .sorting-buttons__icon_color {
-  opacity: 0.3;
+ fill: rgba(0, 0, 0, 0.3);
 }
 
-.sorting-buttons__item:hover ~ .sorting-buttons__icon_color,
-.sorting-buttons__item:hover ~ .sorting-buttons__icon_color {
-  opacity: 0.6
+.sorting-buttons__item:hover .sorting-buttons__icon_color,
+.sorting-buttons__item:focus .sorting-buttons__icon_color {
+ fill: rgba(0, 0, 0, 0.6);
 }
 
-.sorting-buttons__item:active ~ .sorting-buttons_icon_color {
-  opacity: 1;
+.sorting-buttons__item:active .sorting-buttons__icon_color {
+ fill: rgba(0, 0, 0, 1);
 }
 
 .sorting-buttons_icon-active {
-  opacity: 1;
+ fill: rgba(0, 0, 0, 1);
 }
 
 .sorting-buttons__item:hover,
 .sorting-buttons__item:focus {
   color: rgba(0, 0, 0, 0.6);
-  opacity: 0.6
 }
 
 .sorting-buttons__item:active {
   color: rgba(0, 0, 0, 1);
-  opacity: 1;
 }
 
 .sorting-buttons_active {
