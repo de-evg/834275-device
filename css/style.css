@@ -1359,6 +1359,11 @@ input[type="radio"]:focus + label {
   margin-right: 14px;
 }
 
+.footer__user-menu .footer__list-item_margin {
+  margin-left: 154px;
+}
+
+
 /*Контейнер footer-container-middle*/
 .footer__container-middle {
   padding-top: 3px;
@@ -2282,6 +2287,11 @@ input[type="radio"]:focus + label {
   width: 960px;
   background-color: #ffffff;
   z-index: 4;
+  animation: message-animation-show 0.5s ease-out;
+}
+
+.form-error {
+  animation: shock 0.3s ease-out;
 }
 
 .message-form {
@@ -2358,6 +2368,7 @@ input[type="radio"]:focus + label {
 /*Модалка Карта*/
 .modal-map {
  z-index: 3;
+ animation: map-animation-show 0.5s ease-out;
 }
 
 .modal-map__button-close_opacity {
@@ -2372,3 +2383,53 @@ input[type="radio"]:focus + label {
   vertical-align: bottom;
 }
 
+/*Анимация для модалок*/
+@keyframes message-animation-show
+{
+  0%
+  {
+    transform: translate(-100%, -100%);
+    opacity: 0;
+  }
+
+  100%
+  {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes map-animation-show
+{
+  0%
+  {
+    transform: translate(0%, -100%);
+    opacity: 0;
+  }
+
+  100%
+  {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes shock
+{
+  0%
+  {
+    transform: translate(-60%, -50%);
+  }
+  25%
+  {
+    transform: translate(-40%, -50%);
+  }
+  50%
+  {
+    transform: translate(-60%, -50%);
+  }
+  75%
+  {
+    transform: translate(-40%, -50%);
+  }
+}

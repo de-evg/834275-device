@@ -46,6 +46,10 @@ if (document.querySelector(".modal-message") !== null) {
   var modal_message  = document.querySelector(".modal-message");
   var link_message = document.querySelector(".contacts__link")
   var close_button = document.querySelector(".button-close-message");
+  var user_name = document.querySelector("[name=user-name]");
+  var user_email = document.querySelector("[name=user-email");
+  var user_message = document.querySelector(".message-form__user-input-message");
+  var message_form = document.querySelector(".message-form");
 
   link_message.addEventListener("click", function(evt) {
     evt.preventDefault();
@@ -56,24 +60,57 @@ if (document.querySelector(".modal-message") !== null) {
     evt.preventDefault();
     modal_message.classList.remove("modal-show");
   })
+
+  message_form.addEventListener("submit", function(evt) {
+    if (!user_name.value || !user_email.value || !user_message.value) {
+      evt.preventDefault();
+      modal_message.classList.remove("form-error");
+      void modal_message.offsetWidth;
+      modal_message.classList.add("form-error");
+    }
+  })
 }
 
 if (document.querySelector(".user-menu") !== null) {
-  var menu__list_not_login  = document.querySelector(".user-menu__account_not-logged");
-  var menu__list_login  = document.querySelector(".user-menu__in-account");
-  var signin__link = document.querySelector(".user-menu__signin")
-  var logout__link = document.querySelector(".user-menu__logout");
+  var header__in_account  = document.querySelector(".user-menu__in-account");
+  var header__not_logged  = document.querySelector(".user-menu__account_not-logged");
+  var footer__in_account = document.querySelector(".footer__in-account");
+  var footer__not_logged = document.querySelector(".footer__not-logged");
+  var signin__link = document.querySelector(".user-menu__signin-link");
+  var logout__link = document.querySelector(".user-menu__logout-link");
+  var footer__signin_link = document.querySelector(".footer-user-menu__signin-link");
+  var footer__logout_link = document.querySelector(".footer-user-menu__logout-link");
 
   signin__link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    menu__list_not_login.classList.remove("user-menu_show");
-    menu__list_login.classList.add("user-menu_show");
+    header__not_logged.classList.remove("user-menu_show");
+    header__in_account.classList.add("user-menu_show");
+    footer__not_logged.classList.remove("user-menu_show");
+    footer__in_account.classList.add("user-menu_show");
+  })
+
+  footer__signin_link.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    header__not_logged.classList.remove("user-menu_show");
+    header__in_account.classList.add("user-menu_show");
+    footer__not_logged.classList.remove("user-menu_show");
+    footer__in_account.classList.add("user-menu_show");
   })
 
   logout__link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    menu__list_login.classList.remove("user-menu_show");
-    menu__list_not_login.classList.add("user-menu_show");
+    header__in_account.classList.remove("user-menu_show");
+    header__not_logged.classList.add("user-menu_show");
+    footer__in_account.classList.remove("user-menu_show");
+    footer__not_logged.classList.add("user-menu_show");
+  })
+
+  footer__logout_link.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    header__in_account.classList.remove("user-menu_show");
+    header__not_logged.classList.add("user-menu_show");
+    footer__in_account.classList.remove("user-menu_show");
+    footer__not_logged.classList.add("user-menu_show");
   })
 }
 
